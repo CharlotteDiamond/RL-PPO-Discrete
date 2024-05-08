@@ -9,7 +9,7 @@ import torch
 '''Hyperparameter Setting'''
 parser = argparse.ArgumentParser()
 parser.add_argument('--dvc', type=str, default='cuda', help='running device: cuda or cpu')
-parser.add_argument('--EnvIdex', type=int, default=0, help='CP-v1, LLd-v2')
+parser.add_argument('--EnvIdex', type=int, default=0, help='LLd-v2')
 parser.add_argument('--write', type=str2bool, default=False, help='Use SummaryWriter to record the training')
 parser.add_argument('--render', type=str2bool, default=False, help='Render or Not')
 parser.add_argument('--Loadmodel', type=str2bool, default=False, help='Load pretrained model or Not')
@@ -17,7 +17,7 @@ parser.add_argument('--ModelIdex', type=int, default=300000, help='which model t
 
 parser.add_argument('--seed', type=int, default=209, help='random seed')
 parser.add_argument('--T_horizon', type=int, default=2048, help='lenth of long trajectory')
-parser.add_argument('--Max_train_steps', type=int, default=5e7, help='Max training steps')
+parser.add_argument('--Max_train_steps', type=int, default=5e6, help='Max training steps')
 parser.add_argument('--save_interval', type=int, default=1e5, help='Model saving interval, in steps.')
 parser.add_argument('--eval_interval', type=int, default=5e3, help='Model evaluating interval, in steps.')
 
